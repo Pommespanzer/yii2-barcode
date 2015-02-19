@@ -1,6 +1,6 @@
 <?php
 
-namespace Pommespanzer\barcode;
+namespace pommespanzer\barcode;
 
 require_once('class' . DIRECTORY_SEPARATOR . 'BCGColor.php');
 require_once('class' . DIRECTORY_SEPARATOR . 'BCGBarcode.php');
