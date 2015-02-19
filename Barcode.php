@@ -45,9 +45,9 @@ class Barcode
         $drawing->setRotationAngle(0);
         $drawing->setDPI(72);
         $drawing->draw();
-        $drawing->finish($format);
 
-        return $drawing->get_im();
+        header('Content-Type: image/png');
+        $drawing->finish($format);
     }
 
     /**
@@ -56,7 +56,7 @@ class Barcode
      */
     private function setup(BCGcode128 $barcode)
     {
-        $font = new BCGFontFile(__DIR__ . '/data/font/Arial.ttf', 15);
+        $font = new BCGFontFile(__DIR__ . '/font/Arial.ttf', 15);
         $barcode->setFont($font);
         $barcode->setThickness(max(9, min(90, 25)));
     }
